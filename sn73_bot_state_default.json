@@ -1,0 +1,33 @@
+{
+  "total_invested": 0.02,
+  "active_positions": [
+    {
+      "id": 1,
+      "buy_price": 0.005199399,
+      "sell_target_price": 0.00597930885,
+      "alpha_amount": 1.9232992120820116,
+      "tao_invested": 0.01,
+      "created_timestamp": "2025-08-25 11:15:23.513021",
+      "status": "active",
+      "profit_percent": 15
+    },
+    {
+      "id": 2,
+      "buy_price": 0.005350524,
+      "sell_target_price": 0.006153102599999999,
+      "alpha_amount": 1.8689758236763354,
+      "tao_invested": 0.01,
+      "created_timestamp": "2025-08-27 04:47:19.490864",
+      "status": "active",
+      "profit_percent": 15
+    }
+  ],
+  "completed_trades": [],
+  "position_counter": 2,
+  "total_profit_realized": 0.0,
+  "successful_sells": 0,
+  "failed_sells": 0,
+  "last_dca_time": 1756270039.490856,
+  "start_time": 1756270011.8024354,
+  "last_save_time": 1756270039.4908767
+}

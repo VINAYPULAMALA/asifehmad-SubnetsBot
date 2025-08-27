@@ -1,0 +1,72 @@
+# SN73 Micro-Grid Strategy Configuration
+# DCA + 15% Profit Taking on Subnet 73 (MetaHash)
+
+# === Wallet Configuration ===
+wallet: "default"  # Your Bittensor wallet name
+validator: "5E4z3h9yVhmQyCFWNbY9BPpwhx4xFiPwq3eeqmBgVF6KULde"  # Replace with your validator's hotkey SS58 address
+
+# === Target Subnet ===
+target_netuid: 73  # MetaHash subnet for early-adopter strategy
+
+# === Micro-Grid Strategy Settings ===
+dca_amount: 0.01            # Fixed TAO amount per DCA purchase (reduced for testing)
+dca_interval_hours: 6       # DCA every 6 hours
+max_investment: 0.06        # Total investment cap in TAO (test mode - leaves room for fees)
+cap_tolerance: 0.005        # ±10% tolerance (0.055-0.065 TAO range)
+
+# === Profit Taking Settings ===
+profit_target_percent: 15  # Target 15% profit per position
+max_entry_price: 0.10      # Skip DCA if SN73 alpha price above this
+
+# === Risk Management ===
+min_balance: 0.03          # Keep minimum TAO in wallet for transaction fees (test mode)
+stop_loss_percent: -25     # Emergency exit if position down 25%
+max_positions: 10          # Maximum number of active positions to track (test mode)
+
+# === Transaction Fee Management ===
+auto_fee_reserve: 0.04     # Always keep this amount for transaction fees (auto-calculated)
+fee_reserve_enabled: true  # Enable automatic fee reservation
+
+# === Slippage Protection ===
+max_slippage_percent: 0.4  # Maximum allowed price slippage for trades (0.4%)
+price_check_tolerance: 0.2 # Price change tolerance within same block (%)
+
+# === Operational Settings ===
+check_interval_minutes: 5   # How often to check for sell opportunities (faster testing)
+position_timeout_days: 7    # Close positions that haven't filled after 7 days (test mode)
+
+# ===================================================================
+# CONFIGURATION NOTES:
+# ===================================================================
+# 
+# 1. REPLACE 'your_validator_hotkey_ss58_here' with your actual validator hotkey
+# 
+# 2. STRATEGY OVERVIEW:
+#    - DCA 0.05 TAO every 12 hours into SN73 alpha
+#    - Each DCA creates a sell order at +15% profit
+#    - Stop DCA when total investment reaches 5.0 TAO
+#    - Continue managing sell orders until positions close
+# 
+# 3. TIMELINE: ~50 days to reach 5 TAO cap (100 DCA purchases)
+# 
+# 4. POSITION MANAGEMENT:
+#    - Each 0.05 TAO DCA becomes a tracked position
+#    - Sell when SN73 alpha price reaches 15% above buy price
+#    - Use profits to potentially restart DCA if under cap
+# 
+# 5. EARLY ADOPTER THESIS:
+#    - SN73 (MetaHash) launched April 2025 - very new subnet
+#    - OTC marketplace infrastructure play
+#    - Potential for significant appreciation as subnet matures
+# 
+# ===================================================================
+# RISK WARNINGS:
+# ===================================================================
+# 
+# - SN73 is experimental and very new (4 months old)
+# - Limited liquidity and price history
+# - High-risk, high-reward early adopter strategy
+# - Only invest what you can afford to lose
+# - Monitor closely during first few weeks
+# 
+# ===================================================================
